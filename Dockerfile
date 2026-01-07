@@ -1,5 +1,7 @@
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
+RUN apk add --no-cache eudev-libs \
+ && ln -sf /usr/lib/libudev.so.1 /usr/lib/libudev.so
 COPY . /app
 
 RUN mkdir - /app/data
