@@ -1,4 +1,5 @@
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
-COPY *.jar /app/app.jar
-ENTRYPOINT ["java","-jar","/app/app.jar"]
+COPY . /app
+
+ENTRYPOINT ["java","-cp","/app/launcher.jar:/app/lib/*","org.firstinspires.ftc.launcher.LaunchLocal"]
