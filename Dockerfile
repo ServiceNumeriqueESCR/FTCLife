@@ -1,3 +1,3 @@
-FROM openjdk:27-ea-oraclelinux9
+FROM openjdk:8u191-jre-alpine
 COPY * /
 
